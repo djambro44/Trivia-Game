@@ -62,6 +62,28 @@ function timeConverter(t) {
     return minutes + ":" + seconds;
 }
 
+var allQuestions = [
+    {question: "Q1: What does NFL stand for?", 
+    choices: ["Nation Football Legacy", "New Football League", "National Football Leauge"], 
+    correctAnswer: 2},
+    {question: "Q2: How many point is a touchdown worth?",
+    choices: ["7", "6", "3"],
+    correctAnswer: 1},
+    {question: "Q3: How many teams play in the NFL?",
+    choices: ["12", "18", "22"],
+    correctAnswer: 0},
+    {question: "Q4: What is the only team in NFL histroy to go undefeated and win a superbowl?",
+    choices: ["New England Patriots", "Chicago Bears", "Miami Dolphins"],
+    correctAnswer: 2},
+    {question: "Q5: Who is the only player in NFL history to play on three consecutive Super Bowl championship teams?",
+    choices: ["Tom Brady", "Joe Monntana", "Deion Sanders"],
+    correctAnswer: 2}];
+
+var correct=0;
+var correctNumber = 0;
+
+
+
 
 
 
