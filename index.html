@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <title>Trivia Game</title>
-</head>
-<body>
-    <h1>Football Trivia Game!</h1>
 
-    <div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <title>Trivia Game</title>
+</head>
+
+<body>
+  <h1>Football Trivia Game!</h1>
+
+  <div class="jumbotron">
+    <div id=timerDiv>
     <h3 id="timer">Timer</h3>
     <button id="timerButton">Click me to start!</button>
+    </div>
 
     <div id="point"></div>
-   
+
     <div id="question"></div>
+    <hr class="my-4">
     <form name="radioAnswers">
-    <input type="radio" name="choice" value="0"><label id="label0"></label></input>
-		<input type="radio" name="choice" value="1"><label id="label1"></label></input>
-		<input type="radio" name="choice" value="2"><label id="label2"></label></input>
+      <input type="radio" class ="big" name="choice" value="0"><label id="label0"></label></input>
+      <input type="radio" class ="big" name="choice" value="1"><label id="label1"></label></input>
+      <input type="radio" class ="big" name="choice" value="2"><label id="label2"></label></input>
     </form>
+    <div id="nextButtonDiv">
     <input type="button" value="Next" id="next"></input>
+    </div>
+  </div>
 
 
 
-
-    <script src="assets/javascript/game.js"></script>
+  <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
