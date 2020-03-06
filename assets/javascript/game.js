@@ -40,7 +40,7 @@ function count() {
     // DONE: Get the current time, pass that into the timeConverter function,
     //       and save the result in a variable.
     var converted = timeConverter(time);
-    console.log(converted);
+    // console.log(converted);
     
     // DONE: Use the variable we just created to show the converted time in the "display" div.
     $("#timer").text(converted);
@@ -117,46 +117,42 @@ var allQuestions = [
     function nextQuestion (){
         getUserGuess();
         checkGuess();
-        currentNumber++;
         if (currentNumber === allQuestions.length) {
-            alert("Game OVer");
+            alert("Correct Guesses: " + correct);
             console.log(currentNumber);
         } else {
             createQuestion();
         }
-        console.log("user guess: " + userGuess);
-        console.log("correct answer: " + allQuestions[currentNumber].correctAnswer)
-        console.log("Correct guesses: " + correct);
-        console.log("Incorrect guesses: " + incorrect);
+        // console.log("user guess: " + userGuess);
+        // console.log("correct answer: " + allQuestions[currentNumber].correctAnswer)
+        // console.log("Correct guesses: " + correct);
+        // console.log("Incorrect guesses: " + incorrect);
     }
 
     $("#next").on("click", nextQuestion);
-    $("radio").on("click", checkGuess());
+    
 
    
     function getUserGuess() {
         userGuess = $("input[name='choice']:checked").val();
+        console.log("User Guess: " + userGuess);
     }
-
+    
     function checkGuess () {
-        if (userGuess === allQuestions[currentNumber].correctAnswer) {
+        console.log("Correct Answer: " + allQuestions[currentNumber].correctAnswer)
+        if (userGuess == allQuestions[currentNumber].correctAnswer) {
             correct++;
         } else {
             incorrect++;
         }
+        currentNumber++;
+        console.log("correct " + correct, "incorrect " + incorrect, "currentNum " + currentNumber)
     }
 
-    function showScore() {
-        document.forms.radioAnswers.style.display = "none";
-        var question = document.getElementById("question");
-        question.style.display = "none";
-        var elt = document.getElementById("point");
-        elt.style.display = "block";
-        var button = document.getElementById("next");
-        button.style.display = "none";
-        
-    }
+  function reset () {
     
+
+  }
     
 
     
